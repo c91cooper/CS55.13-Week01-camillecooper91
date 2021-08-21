@@ -7,12 +7,14 @@ let myServer = myhttp.createServer(
     console.log(myRequest.url);
 
     let text;
-    
+
     if (myRequest.url === "/howdy"){
       text = "Well hey there!";
     }else{
       text = "I don't know you!";
     }
+
+    text += "...we're in a node.js server!";
 
     myResponse.writeHead(200, {"Content-Type" : "text/plain"});
     
